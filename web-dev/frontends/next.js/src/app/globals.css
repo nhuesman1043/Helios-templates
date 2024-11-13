@@ -1,0 +1,11 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom */
+:root {
+    --background-primary: #2B2D31;
+    --border-primary: #4B4D51;
+    --text-primary: #E0E0E0;
+}
