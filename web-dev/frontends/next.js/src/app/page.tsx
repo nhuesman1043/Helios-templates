@@ -1,19 +1,52 @@
-// Client component
+// ========================================
+// DIRECTIVES
+// ========================================
+
 "use client"
 
+// ========================================
+// IMPORTS
+// ========================================
+
+// ========================
 // Components
+// ========================
 import Header from "@/components/header/header"
 import Navbar from "@/components/navbar/navbar"
 import Content from "@/components/content/content"
 
+// ========================
 // Mantine
-import { AppShell, Burger, Group, ScrollArea } from "@mantine/core"
-import { useDisclosure } from "@mantine/hooks"
+// ========================
+// Core
+import { 
+  AppShell, 
+  Burger, 
+  Group,
+  ScrollArea,
+} from "@mantine/core"
+
+// Hooks
+import { 
+  useDisclosure,
+} from "@mantine/hooks"
+
+// ========================================
+// HOME
+// ========================================
 
 export default function Home() {
-  // Navbar toggle
+  // ========================
+  // Operations
+  // ========================
+  // Navabr toggle
   const [opened, { toggle }] = useDisclosure()
 
+  // 
+
+  // ========================
+  // Render
+  // ========================
   return (
     <main>
       <AppShell
@@ -28,15 +61,15 @@ export default function Home() {
         styles={{
           header: {
             backgroundColor: "var(--background-primary)",
-            borderColor: "var(--border-primary)"
+            borderColor: "var(--border-primary)",
           },
           navbar: {
             backgroundColor: "var(--background-primary)",
-            borderColor: "var(--border-primary)"
+            borderColor: "var(--border-primary)",
           },
           main: {
             backgroundColor: "var(--background-primary)",
-            borderColor: "var(--border-primary)"
+            borderColor: "var(--border-primary)",
           }
         }}
       >

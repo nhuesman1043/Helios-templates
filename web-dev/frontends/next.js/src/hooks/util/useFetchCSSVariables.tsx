@@ -1,7 +1,19 @@
-// React
-import { useState, useEffect } from "react"
+// ========================================
+// IMPORTS
+// ========================================
 
-// Hook to fetch CSS variables
+// ========================
+// React
+// ========================
+import { 
+    useState, 
+    useEffect,
+} from "react"
+
+// ========================================
+// FETCH CSS VARIABLES
+// ========================================
+
 const useFetchCSSVariables = () => {
     // State to store CSS variables
     const [cssVariables, setCSSVariables] = useState<{ [key: string]: string }>({})
@@ -23,18 +35,27 @@ const useFetchCSSVariables = () => {
         // Fetch the CSS variables and set them in state
         const fetchedVariables: { [key: string]: string } = {}
         variablesToFetch.forEach(variable => {
+            // Get the value of the CSS variable
             const value = getCSSVariable(variable)
-            if (value) {
+
+            // If the variable is found, set it in state
+            if (value) 
                 fetchedVariables[variable] = value
-            } else {
+            
+            // If the variable is not found, log an error
+            else 
                 console.error(`CSS variable ${variable} not found`)
-            }
         })
 
+        // Set the CSS variables in state
         setCSSVariables(fetchedVariables)
     }, [])
 
+    // Return the CSS variables
     return cssVariables
 }
 
+// ========================================
+// EXPORT
+// ========================================
 export default useFetchCSSVariables
