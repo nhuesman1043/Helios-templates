@@ -3,9 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom */
+/* Custom variables */
 :root {
+    /* App color scheme */
     --background-primary: #2B2D31;
     --border-primary: #4B4D51;
     --text-primary: #E0E0E0;
+
+    /*  */
 }

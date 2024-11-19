@@ -1,15 +1,41 @@
-// Global CSS
+// ========================================
+// IMPORTS
+// ========================================
+
+// ========================
+// Global Styles
+// ========================
 import "./globals.css"
 
+// ========================
 // Mantine
-import { ColorSchemeScript, MantineProvider } from "@mantine/core"
+// ========================
+// Core
+import { 
+  ColorSchemeScript, 
+  MantineProvider,
+} from "@mantine/core"
+
+// Styles
 import "@mantine/core/styles.css"
+
+// ========================================
+// METADATA
+// ========================================
 
 export const metadata = {
   title: "Template - Next.js",
+  description: "Template for Next.js",
 }
 
+// ========================================
+// ROOT
+// ========================================
+
 export default function RootLayout({
+  // ========================
+  // Render
+  // ========================
   children,
 }: {
   children: React.ReactNode
@@ -20,7 +46,7 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>
+        <MantineProvider defaultColorScheme="dark">
           {children}
         </MantineProvider>
       </body>
